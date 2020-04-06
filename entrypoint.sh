@@ -22,4 +22,4 @@ cd "${SOURCE_DIR}/${CHART_FOLDER}"
 helm inspect chart .
 
 helm repo add chartmuseum "$CHARTREPOSITORY_URL"
-helm push ./ chartmuseum
+helm push ./ chartmuseum "$FORCE"
