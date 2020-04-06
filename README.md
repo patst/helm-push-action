@@ -2,6 +2,8 @@
 
 This actions uses helm3 and uploads a helm chart to a chart repository.
 
+The actions works on AMD64 and ARM runners.
+
 ## Usage
 
 Place in a `.yml` file such as this one in your `.github/workflows` folder. [Refer to the documentation on workflow YAML syntax here.](https://help.github.com/en/articles/workflow-syntax-for-github-actions)

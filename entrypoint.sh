@@ -19,10 +19,7 @@ fi
 
 cd "${SOURCE_DIR}/${CHART_FOLDER}"
 
-helm init --client-only
-
 helm inspect chart .
 
-helm package .
-
-helm chart push "${CHART_FOLDER}-*" "$CHARTREPOSITORY_URL" -u "$HELM_REPO_PASSWORD" -p "$HELM_REPO_PASSWORD" ${FORCE}
+helm repo add chartmuseum "$CHARTREPOSITORY_URL" --username "$HELM_REPO_USERNAME" --password "$HELM_REPO_PASSWORD"
+helm push ./ chartmuseum
