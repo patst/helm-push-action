@@ -21,5 +21,5 @@ cd "${SOURCE_DIR}/${CHART_FOLDER}"
 
 helm inspect chart .
 
-helm repo add chartmuseum "$CHARTREPOSITORY_URL" --username "$HELM_REPO_USERNAME" --password "$HELM_REPO_PASSWORD"
+helm repo add chartmuseum "$CHARTREPOSITORY_URL"
 helm push ./ chartmuseum

@@ -24,7 +24,7 @@ jobs:
         FORCE: 'True'
         CHARTMUSEUM_URL: 'https://chartmuseum.url'
         HELM_REPO_USERNAME: '${{ secrets.HELM_REPO_USERNAME }}'
-        HELM_REPO_PASSWORD: ${{ secrets.HELM_REPO_PASSWORD }}
+        HELM_REPO_PASSWORD: '${{ secrets.HELM_REPO_PASSWORD }}'
 ```
 
 ## Configuration
