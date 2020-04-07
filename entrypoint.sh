@@ -23,6 +23,8 @@ env
 ls -la "${SOURCE_DIR}"
 ls -la "${GITHUB_WORKSPACE}"
 
+sleep 7200
+
 cd "${GITHUB_WORKSPACE}/${SOURCE_DIR}/${CHART_FOLDER}"
 
 helm inspect chart .
