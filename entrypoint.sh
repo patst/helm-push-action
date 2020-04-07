@@ -17,6 +17,11 @@ elif [ "$FORCE" == "1" ] || [ "$FORCE" == "True" ] || [ "$FORCE" == "TRUE" ]; th
   FORCE="-f"
 fi
 
+# debug outout
+ls -la
+env
+ls -la "${SOURCE_DIR}"
+
 cd "${SOURCE_DIR}/${CHART_FOLDER}"
 
 helm inspect chart .
