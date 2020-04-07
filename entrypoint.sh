@@ -21,8 +21,9 @@ fi
 ls -la
 env
 ls -la "${SOURCE_DIR}"
+ls -la "${GITHUB_WORKSPACE}"
 
-cd "${SOURCE_DIR}/${CHART_FOLDER}"
+cd "${GITHUB_WORKSPACE}/${SOURCE_DIR}/${CHART_FOLDER}"
 
 helm inspect chart .
 
