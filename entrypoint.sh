@@ -17,15 +17,7 @@ elif [ "$FORCE" == "1" ] || [ "$FORCE" == "True" ] || [ "$FORCE" == "TRUE" ]; th
   FORCE="-f"
 fi
 
-# debug outout
-ls -la
-env
-ls -la "${SOURCE_DIR}"
-ls -la "${GITHUB_WORKSPACE}"
-
-sleep 7200
-
-cd "${GITHUB_WORKSPACE}/${SOURCE_DIR}/${CHART_FOLDER}"
+cd "${SOURCE_DIR}/${CHART_FOLDER}"
 
 helm inspect chart .
 
