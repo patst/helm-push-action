@@ -25,7 +25,7 @@ RUN apk add bash curl openssl git
 
 RUN curl https://raw.githubusercontent.com/helm/helm/$HELM_VERSION/scripts/get-helm-3 | DESIRED_VERSION=$HELM_VERSION bash
 
-COPY --from=helm-push-builder /go/helm-push /usr/local/bin/helm-push
+COPY --from=helm-push-builder /go/helm-push/bin/helmpush /usr/local/bin/helmpush
 #RUN helm plugin install helm-push/
 
 ENTRYPOINT ["/entrypoint.sh"]
